@@ -7,6 +7,7 @@ import Users from "./pages/users/Users";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import UserCreate from "./pages/users/UserCreate";
+import UserEdit from "./pages/users/UserEdit";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path={'/register'} component={Register} />
           <Route path={'/login'} component={Login} />
           <Route path={'/users/create'} component={UserCreate} />
+          <Route path={'/users/:id/edit'} component={UserEdit} />
       </BrowserRouter>
     </div>
   );

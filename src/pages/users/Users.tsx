@@ -64,6 +64,7 @@ const Users = () => {
                                     <td>{user.email}</td>
                                     <td>{user.role.name}</td>
                                     <td>
+                                        <Link to={`/users/${user.id}/edit`} type="button" className="btn btn-outline-secondary">Edit</Link>
                                         <button onClick={() => del(user.id)} type="button" className="btn btn-outline-secondary">Delete</button>
                                     </td>
                                 </tr>
