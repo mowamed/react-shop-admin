@@ -15,7 +15,8 @@ const Nav = () => {
                     data.id,
                     data.first_name,
                     data.last_name,
-                    data.email
+                    data.email,
+                    data.roles
                 ));
             }
         )();
@@ -28,13 +29,11 @@ const Nav = () => {
 
     return (
         <header className="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-            <a className="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">Company name</a>
-            <ul className="navbar-nav px-3">
-
-                <Link to={"/profile"} className="nav-link" href="/">{user.name}</Link>
-                <Link to={"/login"} onClick={logout} className="nav-link" href="/">Sign out</Link>
-
-            </ul>
+            <span className="navbar-brand col-md-3 col-lg-2 me-0 px-3">Shop Admin</span>
+            <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <Link to={"/profile"} className="me-3 py-2 text-white text-decoration-none">{user.name}</Link>
+                <Link to={"/login"} onClick={logout} className="me-3 py-2 text-white text-decoration-none">Sign out</Link>
+            </nav>
         </header>
     )
 }
