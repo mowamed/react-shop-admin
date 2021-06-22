@@ -4,7 +4,6 @@ import axios from "axios";
 import { Order } from "../../models/Order";
 import { OrderItem } from "../../models/OrderItem";
 import Paginator from "../../components/Paginator";
-import { Link } from "react-router-dom";
 
 const hide = {
   maxHeight: 0,
@@ -36,7 +35,7 @@ const Orders = () => {
 
   const handleExport = async () => {
     const { data } = await axios.post(`export`, {}, { responseType: "blob" });
-    const blob = new Blob([data], { type: "text/csv" });
+    // const blob = new Blob([data], { type: "text/csv" });
     const url = window.URL.createObjectURL(data);
     const link = document.createElement("a");
     link.href = url;
